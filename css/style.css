@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* element size will inclue padding and border */
+}
+
+:root {
+    font-size: 16px;
+    /* 1rem size */
+    --dark-color: #343434;
+    --link-color: #095a99;
+    --link-hover-color: #1395f2;
+    /* give color #f4f4f3 an alias (called a variable)：--dark-color, */
+    /* we can use var(--dark-color) to get the value later */
+    /* if a value will be used in many places, this is a good idea. */
+    /* the alias should start width -- */
+}
+
+
+ul {
+    list-style: none;
+    /* get rid of the leading character of a list item  */
+}
+
+a {
+    text-decoration: none;
+    /* no underline for a link */
+}
+
+.limited-width-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* ---------------------- Page Header --------------------- */
+
+#page-header {
+    background-color: var(--dark-color);
+}
+
+#page-header > div {
+    padding: 1rem;
+}
+
+
+#site-logo{
+    float: left;
+}
+
+#site-logo img {
+    height: 50px;
+}
+
+#site-nav ul {
+    display: none;
+}
+
+#menu-icon {
+    height: 50px;
+    float: right;
+}
+
+#page-header > div::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+}
+
+/* ------------- Post --------------------------*/
+
+#post-content img {
+    width: 100%;
+}
+
+#post h1 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#post a {
+    color: var(--link-color);
+}
+
+#post-content p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+
+} 
+
+main {
+    padding: 0 1rem;
+}
+
+#cate-tag-links  span{
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#cate-tag-links .cate-link {
+    text-decoration: underline;    
+}
+
+#cate-tag-links .tag-link {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+#post-nav {
+    margin-top: 2rem;
+}
+
+#post-nav a {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--link-color)
+}
+
+/* ------------------ Comments ---------------- */
+
+.comments {
+    margin-top: 2rem;
+}
+
+.comments h2 {
+    margin-bottom: 1rem;
+}
+.comments * ul {
+    margin-left: 2rem;
+}
+
+.comments li {
+    margin-top: 1.5rem;
+    border-top: 1px dashed #ccc;;
+    padding-top: 1rem;
+}
+
+.comment header {
+    position: relative;
+    height: 70px;
+}
+
+.comment .avatar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #ccc;
+    padding: 2px;
+}
+
+.comment-author-name {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 70px;
+}
+
+.comment time {
+    display: block;
+    position: absolute;
+    top: 2.5rem;
+    left: 70px;
+
+}
+.comment-content {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.comment-reply {
+    text-align: right;
+    margin-right:  2rem;
+}
+
+.comment-reply a {
+    display: inline-block;   
+    border: 1px solid;
+    border-color: #ccc #ccc #bbb;
+    border-radius: 3px;
+    background: #e6e6e6;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.8);
+    padding: 0.4em 0.8em 0.4em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/*-------- Comment Form ----------- */
+
+#comment-form{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#comment-form .small {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+#comment-form textarea,
+#comment-form input:not([type="submit"]) {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+
+} 
+
+#comment-form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+#comment-form input[type="submit"] {
+    margin-top: 1rem;
+    border: 1px solid;
+    border-color: #ccc #ccc #bbb;
+    border-radius: 3px;
+    background: #e6e6e6;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.8);
+    padding: 0.6em 2em 0.6em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* -------- Search Form --------------------- */
+
+#search-form {
+    position: relative;
+    margin-top: 2rem;
+}
+
+#search-form img {
+    height: 1.5rem;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#search-form::after {
+    content: "";
+    display:  block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: rgba(255,255,255,0.7);
+}
+
+#search-form input {
+    width: 100%;
+    padding: 8px;
+    padding-left: 32px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* -------- Tag Cloud --------- */
+
+#tag-cloud {
+    margin-top: 2rem;
+}
+
+#tag-cloud ul {
+    margin-top: 1rem; 
+}
+
+#tag-cloud li {
+    float: left;
+    margin-right: 5px;
+}
+
+#tag-cloud li a{
+    color: var(--link-color);
+    display: inline-block;
+    border: 1px solid var(--link-color);
+    padding: 5px;
+    border-radius: 5px;margin-bottom: 5px;
+}
+
+#tag-cloud::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+}
+
+
+/* ---- recent Posts ----*/
+
+#recent-posts {
+    margin-top: 2rem;
+}
+
+#recent-posts ul {
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+#recent-posts li {
+    border-bottom: 1px dashed #ccc;
+    padding: 8px 0;
+}
+
+#recent-posts li:first-child {
+    border-top: 1px dashed #ccc;
+}
+
+#recent-posts li a {
+    color: var(--link-color);
+}
+
+/* -----  Recent Comments -------------------*/
+
+#recent-comments {
+    margin-top: 2rem;
+}
+
+#recent-comments ul {
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+#recent-comments li {
+    border-bottom: 1px dashed #ccc;
+    padding: 8px 0;
+}
+
+#recent-comments li:first-child {
+    border-top: 1px dashed #ccc;
+}
+
+#recent-comments li a {
+    color: var(--link-color);
+}
+
+/*----------- Calendar ---------- */
+
+#calendar {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#calendar, 
+#calendar th,
+#calendar td {
+    border: 1px solid var(--dark-color);
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
+
+#calendar caption {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+#calendar thead tr {
+    background-color: var(--dark-color);
+    color: #FFF;
+}
+
+#calendar tbody a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+#calendar .today {
+    background-color: var(--link-hover-color);
+    color: #FFF;
+}
+
+#calendar tfoot a {
+    color: var(--link-color);
+}
+
+/*-------- Page Footer ------------*/
+
+#page-footer {
+    background-color: var(--dark-color);
+    color: #FFF;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#page-footer p:first-child {
+    margin-bottom: 1rem;
+}
+
+#page-footer i {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* ------------------- For Large Screen --------------- */
+
+@media screen and (min-width: 992px) {
+    :root {
+        font-size: 18px;
+    }
+
+    /*----- Page Header ------*/
+    #menu-icon {
+        display: none;
+    }
+    #site-nav ul {
+        display: block;
+    }
+    #site-nav a {
+        color: #CCC;
+        text-transform: uppercase;
+    }
+    #site-nav a:hover {
+        color: #FFF;
+    }
+    #site-nav li {
+        float: left;
+        margin-top: 2.5rem;
+        margin-left: 2rem;
+    }
+
+    #site-logo {
+        margin-right: 3rem;
+    }
+    #site-logo img {
+        display: block; /* 4px !*/
+        height: 60px;
+    }
+
+    #page-header > div {
+        padding: 0.5rem;
+    }
+
+    /* -----------------Page Body---------------- */
+
+    .main-content {
+        width: 68%;
+        float: left;
+    }
+
+    aside {
+        width: 30%;
+        float: right;
+    }
+
+    main::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        clear: both;
+    }
+
+
+    /* --------- Post ------------------*/
+
+
+    #post-content img {
+        width: 45%;
+    }
+
+    #post-content img:nth-of-type(odd) {
+        float:left;
+        margin: 1rem 1rem 1rem 0;
+    }
+    #post-content img:nth-of-type(even) {
+        float: right;
+        margin: 1rem 0 1rem 1rem;
+    }
+
+    #post-content img:nth-child(1) {
+        shape-outside: ellipse();
+    }
+    
+    .main-content, aside {
+        margin-top: 2rem;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #post-meta {
+        text-align: center;
+    }
+
+    #cate-tag-links .tag-link:hover {
+        color: #FFF;
+        background-color: var(--link-color);
+        transition: all 300ms ease;
+    }
+
+    body {
+        background-color: #e6e6e6;
+    }
+    #post {
+        background-color: #FFF;
+        padding: 1rem;
+        box-shadow: 0 0 5px #999;
+        border-radius: 5px;
+    }
+
+    /* --------- Post Nav ------------- */
+
+    #post-nav a:first-child{
+        width: 48%;
+        float: left;
+    }
+
+    #post-nav a:last-child{
+        width: 48%;
+        float: right;
+        text-align: right;
+    }
+
+    #post-nav a:hover {
+        color: var(--link-hover-color);
+    }
+
+    #post-nav::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        clear: both;
+
+    }
+
+    /*------------ Comments & Comment Form------------------ */
+
+    #comment-form input[type="submit"] {
+        cursor: pointer;
+    }
+    .comment-reply a:hover,
+    #comment-form input[type="submit"]:hover 
+    
+    {
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 
+                    inset 0 15px 17px rgba(255, 255, 255, 0.8), 
+                    inset 0 0 12px rgba(0, 0, 0, 0.05);
+    }
+
+
+
+    /* ------- Search Form -------------*/
+
+    #search-form {
+        margin-top: 0;
+    }
+
+    /* ------ Tag Cloud -------- */
+
+    #tag-cloud a:hover{
+        color: #FFF;
+        background-color: var(--link-color);
+        transition: all 300ms ease-in-out;
+    }
+
+    /*------ Recent Posts and Comments ----------*/
+
+    #recent-posts li:hover,
+    #recent-comments li:hover {
+        background-color: #ddd;
+    }
+
+
+    #recent-posts a:hover,
+    #recent-comments a:hover {
+        color: var(--link-hover-color);
+    }
+
+    /*-------- Calendar ----------------*/
+
+    #calendar a:hover {
+        color: var(--link-hover-color);
+    }
+    
+}
